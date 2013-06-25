@@ -43,14 +43,6 @@ class Parser:
         except IndexError:
             return None
 
-    def stringify(self, value):
-        if value[0] is '"' or value[0] is "'":
-            if value[-1] is '"' or value[-1] is "'":
-                return value[1:-1]
-
-    def symbol_value(self, name):
-        return symbols[name]
-
     def _op_get(self):
         self.accumulator = int(input("input > "))
 
